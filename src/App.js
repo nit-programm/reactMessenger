@@ -24,7 +24,6 @@ function App() {
         {messageList.map((objMsg) => (
           <Message text={objMsg.text} author={objMsg.author} />
         ))}
-        {/* <Counter /> */}
         <Form onSubmit={handleAddMessage} />
       </header>
     </div>
