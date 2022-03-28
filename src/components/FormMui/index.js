@@ -1,9 +1,9 @@
-import { useEffect, useRef, useState } from "react"
+import { Button, TextField } from "@mui/material";
+import { useState } from "react"
 import './styles.css'
 
-export const Form = ({onSubmit}) => {
+export const FormMui = ({onSubmit}) => {
     const[text,setText] = useState('');
-    const textField = useRef();
 
     const handleChangeValue = (e) => {
         setText(e.target.value);
@@ -14,17 +14,11 @@ export const Form = ({onSubmit}) => {
         onSubmit(text);
         setText("");
     }
-
-    useEffect(() => {
-        textField.current?.focus();
-
-    }, []);
-
     return <form onSubmit={handleSubmit}>
         <label htmlFor="msgText">
             Type Message:
-            <input ref={textField} id="msgText" value={text} onChange={handleChangeValue} type="text"/>
+            <TextField id="msgText" value={text} onChange={handleChangeValue} type="text"/>
         </label>
-        <input className="button" type="submit"/>
+        <Button className="button" type="submit">send</Button>
     </form>
 }
