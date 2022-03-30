@@ -1,18 +1,14 @@
 .chatList{
   list-style: none;
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  width: 150px;
-  height: 200px;
-  display: flex;
-  flex-direction: column;
-  background-color: #576174;
   margin: 0;
   padding: 0;
-  border-radius: 10px;
-  color: white;
-  padding-top: 15px;
+  text-align: right;
+}
+.chatList a{
+  text-decoration: none;
+  font-weight: 600;
+  color: black;
+  font-size: 20px;
 }
 
 .App {

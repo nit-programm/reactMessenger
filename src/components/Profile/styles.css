@@ -1,0 +1,12 @@
+.profile__image{
+    display: block;
+    border-radius: 100%;
+}
+.profile__block{
+    display: block;
+    margin: 0 auto;
+    max-width: 100px;
+}
+.profile__name{
+    text-align: center;
+}
